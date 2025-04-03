@@ -37,14 +37,12 @@ class MainActivity : ComponentActivity() {
                // Tela01
                 composable ("home") {
                     TelaHome(
-                        nomeTela = "Home",
                         clickB1 = { navController.navigate("Tela01") }
                     )
                 }
                 //Tela02
                 composable ("Tela01") {
                     TelaPergunta(
-                        nomeTela = "Pergunta01",
                         pergunta = "Quanto é 1+1?",
                         resposta = "2",
                         proximo = { navController.navigate("Tela02")},
@@ -54,7 +52,6 @@ class MainActivity : ComponentActivity() {
                 //Tela03
                 composable ("Tela02") {
                     TelaPergunta(
-                        nomeTela = "Pergunta02",
                         pergunta = "Quanto é 2+2?",
                         resposta = "4",
                         proximo = { navController.navigate("Tela03")},
@@ -64,7 +61,6 @@ class MainActivity : ComponentActivity() {
                 //Tela03
                 composable ("Tela03") {
                     TelaPergunta(
-                        nomeTela = "Pergunta03",
                         pergunta = "Quanto é 3+3?",
                         resposta = "6",
                         proximo = { navController.navigate("TelaPremio")},
@@ -83,7 +79,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TelaHome(
-    nomeTela: String,
     clickB1: () -> Unit,
 ) {
     Column(
@@ -112,7 +107,6 @@ fun TelaFinal(
 
 @Composable
 fun TelaPergunta(
-    nomeTela: String,
     pergunta: String,
     resposta: String,
     proximo: () -> Unit,
@@ -160,14 +154,12 @@ fun TelaPergunta(
 @Composable
 fun Teste() {
     TelaPergunta(
-        nomeTela = "Pergunta01",
         pergunta = "Quanto é 1+1?",
         resposta = "2",
         proximo = {},
         anterior = {}
     )
     TelaHome(
-        nomeTela = "Home",
         clickB1 =  {}
     )
     TelaFinal(
