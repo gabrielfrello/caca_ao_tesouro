@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.caca_ao_tesouro"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.caca_ao_tesouro"
